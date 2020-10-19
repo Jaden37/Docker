@@ -1,0 +1,67 @@
+@import 'variables';
+
+.vintage{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 90vh;
+    width: 60vw;
+    background: url('../../images/300SL/front.jpg');
+    background-size: cover;
+    padding: 0 20vw;
+
+    .vintage-text{
+        color: $main_white;
+        font-size: 50px;
+        font-family: 'Abril Fatface', cursive;
+    }
+
+    .vintage-bottom{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        width: 100%;
+        background-color: $main_black_transparent;
+        color: $main_white;
+
+        .vintage-bottom-item{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            &.video{
+                height: 50%;
+                width: 50%;
+            }
+
+            &.text{
+                flex-grow: 2;
+            }
+    
+            &.arrow{
+                height: 100%;
+                min-width: 5vw;
+                text-align: center;
+                font-size: 50px;
+                transition: all 0.3s ease;
+
+                &:hover{
+                    min-width: 7vw;
+                    font-size: 60px;
+                }
+            }
+
+            &.left{
+                background-color: $main_gray_transparent;
+            }
+
+            &.left{
+                background-color: $second_gray_transparent;
+            }
+        }
+    }
+}

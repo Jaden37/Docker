@@ -1,0 +1,28 @@
+@import 'variables';
+
+.navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: $main_black;
+
+    .navbar-item{
+        color: $main_gray;
+        cursor: pointer;
+        margin: 0 20px;
+        font-family: 'Open Sans', sans-serif;
+
+        &:hover{
+          color: $main_red;  
+        }
+    }
+
+    .navbar-logo{
+        display: flex;
+        flex-flow: row nowrap;
+        max-width: 80px;
+    }
+}

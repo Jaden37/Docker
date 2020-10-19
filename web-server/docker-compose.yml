@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    # build ./docker/web/Dockerfile
+    build: ./docker/web
+    ports:
+     - "8080:80"
+  db:
+    # build ./docker/db/Dockerfile
+    build: ./docker/db
+    ports:
+      - "3306:27017"

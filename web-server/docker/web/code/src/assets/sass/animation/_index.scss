@@ -1,0 +1,54 @@
+@import 'variables';
+
+.animation{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 250vh;
+    width: 90vw;
+    padding: 0 05vw;
+    
+    .animation-img{
+        position: relative;
+        height: 50%;
+        width: 100%;
+        transition: all 1S ease-in-out;
+        background: #000;
+
+        &.first{
+            background: url('../../images/300SL/close.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: scale(1.001);
+        }
+    
+        &.second{
+            background: url('../../images/300SL/open.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            height: 125vh;
+            width: 90vw;
+        }
+
+        // &.fixed{
+        //     position: sticky;
+        //     width: 80vw;
+        //     height: 100vh;
+        //     padding: 0 10vw;
+        //     top:0;
+        // }
+
+        &.opacity{
+            opacity: 0;
+        }
+
+        &.no-opacity{
+            opacity: 1;
+        }
+    }
+
+}
