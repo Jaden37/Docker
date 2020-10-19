@@ -1,0 +1,16 @@
+{
+    "name": "docker_web_node_js",
+    "version": "1.0.0",
+    "description": "Node.js with Docker",
+    "author": "Jules Peguet",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1",
+      "mongodb": "^3.6.0",
+      "redis": "^3.0.2",
+      "pg": "^8.4.0"
+    }
+  }

@@ -3,6 +3,8 @@
 
 ### Dans ce repo se trouve plusieurs configuration de Docker en fonction de différents usages.
 
+Les dossiers comprenant dans leur nom "_test" ne sont pas complet ou proviennent de tutoriels.
+
 ## Thèmes abordées:
 * :white_check_mark: Dockerfile
 * :white_check_mark: Docker Compose

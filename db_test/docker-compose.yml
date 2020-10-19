@@ -1,0 +1,47 @@
+# Version du docker-compose et non du fichier
+version: '3'
+services:
+    web:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        ports: 
+            - "8081:8080"
+        volumes:
+            - .:/usr/src/app
+            - /node_modules
+        links:
+            # - mongo
+            # - mongodb
+            - pgsql
+    
+    pgsql:
+        image: postgres
+        environment:
+            - POSTGRES_USER=foo
+            - POSTGRES_PASSWORD=foobar
+            - POSTGRES_DB=db
+        volumes:
+            - ./postgres-data:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+    # mongodb:
+    #     image: bitnami/mongodb:latest
+    #     environment:
+    #         - MONGODB_USERNAME=my_user
+    #         - MONGODB_PASSWORD=password123
+    #         - MONGODB_DATABASE=my_database
+    #     ports:
+    #         - "27017:27017"
+    # mongo:
+    #     image: mongo
+    #     container_name: mongo
+    #     restart: always
+    #     volumes:
+    #         - ./data:/data/db
+    #     ports:
+    #         - "27017:27017"
+    #     command: ["-f", "/etc/mongod.conf"]
+    #     environment:
+    #         MONGO_INITDB_ROOT_USERNAME: root
+    #         MONGO_INITDB_ROOT_PASSWORD: example

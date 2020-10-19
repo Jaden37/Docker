@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    jules_postgres:
+        image: jules_postgres:latest
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=root
+            - POSTGRES_DB=db
+        ports:
+            - "5432:5432"
